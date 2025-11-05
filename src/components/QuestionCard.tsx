@@ -14,18 +14,20 @@ export const QuestionCard = ({
   question,
 }: QuestionCardProps) => {
   return (
-    <div className="bg-tertiary-800/40 rounded-sm p-8 shadow-md backdrop-blur-sm">
-      <p className="mb-6 text-xl font-semibold text-white">{question}</p>
+    <div className="bg-tertiary-800/40 mx-auto max-w-full rounded-sm p-8 shadow-md backdrop-blur-sm md:w-[800px]">
+      <p className="mb-6 min-h-[56px] text-xl font-semibold break-words text-white">
+        {question}
+      </p>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {answers.map((answer, index) => (
           <Button
-            className="flex w-full justify-center gap-2 py-3 text-base font-medium transition hover:brightness-110"
+            className="flex max-w-full justify-center gap-2 py-3 text-base font-medium transition hover:brightness-110"
             key={`${index}-${answer}`}
             onClick={() => onSelect(answer)}
             variant="primary"
           >
-            <span>
+            <span className="w-full truncate text-center">
               {answerLabels[index]} {answer}
             </span>
           </Button>
