@@ -15,6 +15,8 @@ export type Category =
   | 'science'
   | 'space';
 
+export type Difficulty = 0 | 1 | 2;
+
 export type QuizQuestion = {
   answers: Answer[];
   category: Category;

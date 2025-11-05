@@ -18,7 +18,9 @@ export const BaseLayout = ({
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl flex-1 px-4 py-8">{children}</main>
+      <main className="mx-auto max-w-5xl flex-1 sm:px-4 sm:py-8">
+        {children}
+      </main>
 
       <footer className="bg-secondary-800 mt-auto">
         <div className="text-secondary-50 mx-auto max-w-5xl p-2 text-sm">

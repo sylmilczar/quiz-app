@@ -1,31 +1,36 @@
 import { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-import { AnswersSummary } from '@/components/AnswersSummary';
-import { Button } from '@/components/Button';
-import { QuestionCard } from '@/components/QuestionCard';
+import {
+  AnswersSummary,
+  Button,
+  QuestionCard,
+  ScrollDownButton,
+} from '@/components';
+import { useQuizParams } from '@/hooks/useQuizParams';
 
 import type { Answer, QuizQuestion } from '../types/quizQuestions.types';
 
 import { QUIZ_QUESTIONS } from '../quizQuestions';
 export const GamePage = () => {
   const navigate = useNavigate();
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const numQuestions = Number(params.get('questions')) || 5;
-  const difficulty = params.get('difficulty');
 
-  // Filtrowanie pytań wg poziomu trudności
+  const { difficulty, numQuestions } = useQuizParams();
+
   const [questions] = useState<QuizQuestion[]>(() => {
     let filtered: QuizQuestion[] = QUIZ_QUESTIONS;
-    if (difficulty !== null && difficulty !== undefined && difficulty !== '') {
+
+    const difficultyNumber = Number(difficulty);
+    if (!isNaN(difficultyNumber)) {
       filtered = QUIZ_QUESTIONS.filter(
-        (q: QuizQuestion) => String(q.difficultyLevel) === difficulty
+        (q: QuizQuestion) => q.difficultyLevel === difficultyNumber
       );
     }
+
     const shuffled = [...filtered].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, numQuestions);
   });
+
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
   const [score, setScore] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
@@ -77,7 +82,7 @@ export const GamePage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-6 px-4 py-8 sm:gap-10 sm:py-12">
+    <div className="flex flex-col items-center justify-center gap-6 px-2 py-8 sm:gap-10 sm:py-12">
       <div className="w-full text-center">
         {!isFinished ? (
           <>
@@ -105,26 +110,30 @@ export const GamePage = () => {
             />
           </>
         ) : (
-          <div className="flex flex-col items-center">
-            <Button
-              className="px-8 py-3 text-base"
-              onClick={() => navigate('/')}
-              variant="secondary"
-            >
-              Powrót do ekranu startowego
-            </Button>
+          <div className="mb-6 flex flex-col items-center">
+            <ScrollDownButton />
+
             <AnswersSummary
               answers={answersHistory}
               score={score}
               totalQuestions={questions.length}
             />
-            <Button
-              className="px-8 py-3 text-base"
-              onClick={() => navigate('/')}
-              variant="secondary"
-            >
-              Powrót do ekranu startowego
-            </Button>
+            <div className="flex w-full justify-between gap-2">
+              <Button
+                className="text-sm"
+                onClick={() => navigate('/')}
+                variant="secondary"
+              >
+                Powrót do ekranu startowego
+              </Button>
+              <Button
+                className="text-sm"
+                onClick={() => window.location.reload()}
+                variant="secondary"
+              >
+                Zagraj jeszcze raz!
+              </Button>
+            </div>
           </div>
         )}
 
