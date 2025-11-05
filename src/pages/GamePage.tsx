@@ -77,15 +77,15 @@ export const GamePage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-10 px-4 py-12">
-      <div className="text-center">
+    <div className="flex flex-col items-center justify-center gap-6 px-4 py-8 sm:gap-10 sm:py-12">
+      <div className="w-full text-center">
         {!isFinished ? (
           <>
             <div>
-              <h2 className="mb-2 text-3xl font-semibold text-yellow-400">
+              <h2 className="mb-2 text-2xl font-semibold text-yellow-400 sm:text-3xl">
                 Gra rozpoczęta!
               </h2>
-              <p className="mb-8 text-slate-200">
+              <p className="mb-6 text-slate-200 sm:mb-8">
                 Odpowiadaj na pytania i sprawdź swoją wiedzę 🚀
               </p>
             </div>

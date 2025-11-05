@@ -20,12 +20,12 @@ export const QuestionCard = ({
   selectedAnswer,
 }: QuestionCardProps) => {
   return (
-    <div className="bg-tertiary-800/40 mx-auto min-w-lg rounded-sm p-8 shadow-md backdrop-blur-sm md:min-w-3xl">
-      <p className="mb-6 min-h-[56px] text-xl font-semibold break-words text-white">
+    <div className="bg-tertiary-800/40 mx-auto w-full max-w-4xl rounded-sm p-2 shadow-md backdrop-blur-sm sm:p-8 md:p-4">
+      <p className="mb-6 text-lg font-semibold break-words text-white sm:text-xl">
         {question}
       </p>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-2">
         {answers.map((answer, index) => {
           const isSelected = selectedAnswer === answer;
           let borderColor = '';

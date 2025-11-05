@@ -28,17 +28,20 @@ export const AnswersSummary = ({
         </p>
       </div>
 
-      <div className="bg-tertiary-800/40 mx-auto mb-8 w-full max-w-2xl rounded-sm p-6">
-        <h4 className="mb-4 text-xl font-semibold text-yellow-400">
+      <div className="bg-tertiary-800/40 mx-auto mb-8 w-full max-w-2xl rounded-sm p-4 sm:p-6">
+        <h4 className="mb-4 text-lg font-semibold text-yellow-400 sm:text-xl">
           Podsumowanie odpowiedzi:
         </h4>
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {answers.map((answer, index) => (
-            <div className="bg-tertiary-700/20 rounded-sm p-4" key={index}>
+            <div
+              className="bg-tertiary-700/20 rounded-sm p-3 sm:p-4"
+              key={index}
+            >
               <p className="mb-2 text-left font-medium text-white">
                 {index + 1}. {answer.question}
               </p>
-              <div className="ms-3 flex flex-col gap-1 text-sm">
+              <div className="flex flex-col gap-1 text-sm md:ms-3">
                 <div className="flex items-center gap-2">
                   <span className="text-slate-300">Twoja odpowiedź:</span>
                   <span
