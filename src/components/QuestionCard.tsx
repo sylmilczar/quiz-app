@@ -14,7 +14,7 @@ export const QuestionCard = ({
   question,
 }: QuestionCardProps) => {
   return (
-    <div className="bg-tertiary-800/40 rounded-2xl p-8 shadow-md backdrop-blur-sm">
+    <div className="bg-tertiary-800/40 rounded-sm p-8 shadow-md backdrop-blur-sm">
       <p className="mb-6 text-xl font-semibold text-white">{question}</p>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
