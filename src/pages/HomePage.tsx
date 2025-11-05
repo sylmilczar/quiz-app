@@ -19,7 +19,7 @@ export const HomePage = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <h1 className="text-secondary-400 mt-5 mb-10 text-4xl font-bold">
+      <h1 className="mt-5 mb-10 text-4xl font-bold text-yellow-400">
         Witaj w CosmicQuiz!
       </h1>
       <p className="mb-4 text-lg text-slate-200">

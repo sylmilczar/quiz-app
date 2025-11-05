@@ -9,7 +9,7 @@ export const GamePage = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-10 px-4 py-12">
       <div className="w-full max-w-2xl text-center">
-        <h2 className="text-secondary-400 mb-2 text-3xl font-semibold">
+        <h2 className="mb-2 text-3xl font-semibold text-yellow-400">
           Gra rozpoczęta!
         </h2>
         <p className="mb-8 text-slate-200">

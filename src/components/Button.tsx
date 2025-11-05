@@ -15,7 +15,7 @@ export const Button = ({
     primary:
       'bg-primary-600 hover:bg-primary-700 active:bg-primary-900 text-white ',
     secondary:
-      'bg-secondary-500 hover:bg-secondary-600 active:bg-secondary-800 text-white',
+      'bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-800 text-secondary-950',
     tertiary:
       'bg-tertiary-600 hover:bg-tertiary-700 active:bg-tertiary-900 text-white',
   };
