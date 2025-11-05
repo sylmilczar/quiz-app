@@ -14,22 +14,32 @@ import type { Answer, QuizQuestion } from '../types/quizQuestions.types';
 import { QUIZ_QUESTIONS } from '../quizQuestions';
 export const GamePage = () => {
   const navigate = useNavigate();
-
   const { difficulty, numQuestions } = useQuizParams();
 
-  const [questions] = useState<QuizQuestion[]>(() => {
-    let filtered: QuizQuestion[] = QUIZ_QUESTIONS;
+  const generateQuestions = (excludeQuestions: string[] = []) => {
+    let filtered = QUIZ_QUESTIONS.filter(
+      (q) => !excludeQuestions.includes(q.question)
+    );
 
     const difficultyNumber = Number(difficulty);
     if (!isNaN(difficultyNumber)) {
+      filtered = filtered.filter((q) => q.difficultyLevel === difficultyNumber);
+    }
+
+    if (filtered.length < numQuestions) {
       filtered = QUIZ_QUESTIONS.filter(
-        (q: QuizQuestion) => q.difficultyLevel === difficultyNumber
+        (q) =>
+          isNaN(Number(difficulty)) || q.difficultyLevel === Number(difficulty)
       );
     }
 
     const shuffled = [...filtered].sort(() => Math.random() - 0.5);
     return shuffled.slice(0, numQuestions);
-  });
+  };
+
+  const [questions, setQuestions] = useState<QuizQuestion[]>(() =>
+    generateQuestions()
+  );
 
   const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
   const [score, setScore] = useState(0);
@@ -50,11 +60,14 @@ export const GamePage = () => {
 
   const handleSelect = (selected: string) => {
     if (isLocked) return;
+
     setSelectedAnswer(selected);
+
     const correctAnswer = currentQuestion.answers.find(
       (a: Answer) => a.correct
     )?.text;
     const correct = selected === correctAnswer;
+
     setIsCorrect(correct);
     setAnswersHistory((prev) => [
       ...prev,
@@ -66,19 +79,34 @@ export const GamePage = () => {
       },
     ]);
     setIsLocked(true);
-    if (correct) {
-      setScore((prev: number) => prev + 1);
-    }
+
+    if (correct) setScore((prev) => prev + 1);
+
     setTimeout(() => {
       setSelectedAnswer(null);
       setIsCorrect(null);
       setIsLocked(false);
+
       if (currentQuestionIdx < questions.length - 1) {
-        setCurrentQuestionIdx((idx: number) => idx + 1);
+        setCurrentQuestionIdx((idx) => idx + 1);
       } else {
         setIsFinished(true);
       }
     }, 600);
+  };
+
+  const restartGame = () => {
+    const usedQuestions = answersHistory.map((a) => a.question);
+    const newQuestions = generateQuestions(usedQuestions);
+
+    setQuestions(newQuestions);
+    setCurrentQuestionIdx(0);
+    setScore(0);
+    setIsFinished(false);
+    setSelectedAnswer(null);
+    setIsCorrect(null);
+    setIsLocked(false);
+    setAnswersHistory([]);
   };
 
   return (
@@ -128,7 +156,7 @@ export const GamePage = () => {
               </Button>
               <Button
                 className="text-sm"
-                onClick={() => window.location.reload()}
+                onClick={restartGame}
                 variant="secondary"
               >
                 Zagraj jeszcze raz!
