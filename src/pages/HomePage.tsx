@@ -35,9 +35,9 @@ export const HomePage = () => {
               onChange={(e) => setNumQuestions(Number(e.target.value))}
               value={numQuestions}
             >
-              <option value={3}>3</option>
               <option value={5}>5</option>
               <option value={10}>10</option>
+              <option value={20}>20</option>
             </select>
           </label>
 
@@ -48,9 +48,9 @@ export const HomePage = () => {
               onChange={(e) => setDifficulty(e.target.value)}
               value={difficulty}
             >
-              <option value="łatwy">Łatwy</option>
-              <option value="średni">Średni</option>
-              <option value="trudny">Trudny</option>
+              <option value={0}>Łatwy</option>
+              <option value={1}>Średni</option>
+              <option value={2}>Trudny</option>
             </select>
           </label>
         </div>
