@@ -1,68 +1,51 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+@import 'tailwindcss';
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  /* Primary — Calm Cosmic Blue */
+  --color-primary-50: #f5f7fa;
+  --color-primary-100: #e2e8f3;
+  --color-primary-200: #c3d0e7;
+  --color-primary-300: #99afd6;
+  --color-primary-400: #6d88c2;
+  --color-primary-500: #4c67ab; /* Main */
+  --color-primary-600: #3c528e;
+  --color-primary-700: #324373;
+  --color-primary-800: #283558;
+  --color-primary-900: #1f2941;
+  --color-primary-950: #141a27;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  /* Secondary — Meteor Orange */
+  --color-secondary-50: #fff8f2;
+  --color-secondary-100: #ffe8d4;
+  --color-secondary-200: #ffc69e;
+  --color-secondary-300: #ffa169;
+  --color-secondary-400: #ff7c33;
+  --color-secondary-500: #f15b1f; /* Main */
+  --color-secondary-600: #c64a1b;
+  --color-secondary-700: #9c3a16;
+  --color-secondary-800: #712911;
+  --color-secondary-900: #47190b;
+  --color-secondary-950: #290d05;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  /* Tertiary — Stellar Slate */
+  --color-tertiary-50: #f6f7f9;
+  --color-tertiary-100: #e4e7ec;
+  --color-tertiary-200: #c9ced9;
+  --color-tertiary-300: #a6adb9;
+  --color-tertiary-400: #7d8797;
+  --color-tertiary-500: #5e6979; /* Main */
+  --color-tertiary-600: #4b5563;
+  --color-tertiary-700: #3c4450;
+  --color-tertiary-800: #2c333d;
+  --color-tertiary-900: #1f2328;
+  --color-tertiary-950: #131518;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+@layer base {
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.25rem;
+    color: #050505;
   }
 }
