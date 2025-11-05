@@ -1,17 +1,13 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import {
-  AnswersSummary,
-  Button,
-  QuestionCard,
-  ScrollDownButton,
-} from '@/components';
+import { AnswersSummary, Button, QuestionCard } from '@/components';
 import { useQuizParams } from '@/hooks/useQuizParams';
 
 import type { Answer, QuizQuestion } from '../types/quizQuestions.types';
 
 import { QUIZ_QUESTIONS } from '../quizQuestions';
+
 export const GamePage = () => {
   const navigate = useNavigate();
   const { difficulty, numQuestions } = useQuizParams();
@@ -109,6 +105,23 @@ export const GamePage = () => {
     setAnswersHistory([]);
   };
 
+  const renderButtonsSection = () => {
+    return (
+      <div className="flex w-full justify-between gap-2">
+        <Button
+          className="text-sm"
+          onClick={() => navigate('/')}
+          variant="secondary"
+        >
+          Powrót do ekranu startowego
+        </Button>
+        <Button className="text-sm" onClick={restartGame} variant="secondary">
+          Zagraj jeszcze raz!
+        </Button>
+      </div>
+    );
+  };
+
   return (
     <div className="flex flex-col items-center justify-center gap-6 px-2 py-8 sm:gap-10 sm:py-12">
       <div className="w-full text-center">
@@ -139,29 +152,13 @@ export const GamePage = () => {
           </>
         ) : (
           <div className="mb-6 flex flex-col items-center">
-            <ScrollDownButton />
-
+            {renderButtonsSection()}
             <AnswersSummary
               answers={answersHistory}
               score={score}
               totalQuestions={questions.length}
             />
-            <div className="flex w-full justify-between gap-2">
-              <Button
-                className="text-sm"
-                onClick={() => navigate('/')}
-                variant="secondary"
-              >
-                Powrót do ekranu startowego
-              </Button>
-              <Button
-                className="text-sm"
-                onClick={restartGame}
-                variant="secondary"
-              >
-                Zagraj jeszcze raz!
-              </Button>
-            </div>
+            {renderButtonsSection()}
           </div>
         )}
 
