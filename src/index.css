@@ -1,11 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
 @import 'tailwindcss';
-
-body {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #171717;
-}
 
 @theme {
   --color-primary-50: #fdf3f0;
@@ -32,15 +26,23 @@ body {
   --color-secondary-900: #0c0c0c;
   --color-secondary-950: #050505;
 
-  --color-tertiary-50: #f0f9ff;
-  --color-tertiary-100: #e0f2fe;
-  --color-tertiary-200: #bae6fd;
-  --color-tertiary-300: #7dd3fc;
-  --color-tertiary-400: #38bdf8;
-  --color-tertiary-500: #0ea5e9; /* Sky blue */
-  --color-tertiary-600: #0284c7;
-  --color-tertiary-700: #0369a1;
-  --color-tertiary-800: #075985;
-  --color-tertiary-900: #0c4a6e;
-  --color-tertiary-950: #082f49;
+  --color-tertiary-50: #f5f8fa;
+  --color-tertiary-100: #e6edf3;
+  --color-tertiary-200: #c8d9e4;
+  --color-tertiary-300: #a9c3d4;
+  --color-tertiary-400: #8aaac3;
+  --color-tertiary-500: #6c91b3; /* Steel blue */
+  --color-tertiary-600: #58789b;
+  --color-tertiary-700: #465f7f;
+  --color-tertiary-800: #354764;
+  --color-tertiary-900: #24304a;
+  --color-tertiary-950: #161d2f;
+}
+
+@layer base {
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.25rem;
+    color: #050505;
+  }
 }
