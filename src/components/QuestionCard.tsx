@@ -14,7 +14,7 @@ export const QuestionCard = ({
   question,
 }: QuestionCardProps) => {
   return (
-    <div className="bg-secondary-50 w-full max-w-md rounded-2xl p-6 text-center shadow-md">
+    <div className="bg-secondary-600 w-full rounded-sm p-6 text-center">
       <p className="mb-6 text-lg font-semibold">{question}</p>
 
       <div className="grid grid-cols-2 gap-4">
@@ -23,9 +23,11 @@ export const QuestionCard = ({
             className="flex items-center gap-2 text-base"
             key={`${index}-${answer}`}
             onClick={() => onSelect(answer)}
+            variant="primary"
           >
-            <span>{answerLabels[index]}</span>
-            <span>{answer}</span>
+            <span className="px-4">
+              {answerLabels[index]} {answer}
+            </span>
           </Button>
         ))}
       </div>
