@@ -1928,4 +1928,227 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     id: 150,
     question: 'Które z poniższych stwierdzeń najlepiej opisuje heliosferę?',
   },
+  {
+    answers: [
+      { correct: false, text: 'Beata Kozidrak' },
+      { correct: false, text: 'Joanna Jabłczyńska' },
+      { correct: true, text: 'Joanna Liszowska' },
+      { correct: false, text: 'Natalia Siwiec' },
+    ],
+    category: 'celebrities',
+    difficultyLevel: 1,
+    id: 151,
+    question: 'Uzupełnij: "__ kieliszek do kolacji __"',
+  },
+  {
+    answers: [
+      { correct: true, text: 'Katy Perry' },
+      { correct: false, text: 'Lady Gaga' },
+      { correct: false, text: 'Beyoncé' },
+      { correct: false, text: 'Rihanna' },
+    ],
+    category: 'celebrities',
+    difficultyLevel: 0,
+    id: 152,
+    question:
+      'Która światowa gwiazda pop wzięła udział w misji Blue Origin w 2025 roku jako jedna z pierwszych kobiet w kosmosie?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'Lauren Sánchez' },
+      { correct: false, text: 'Gayle King' },
+      { correct: false, text: 'Kim Kardashian' },
+      { correct: false, text: 'Oprah Winfrey' },
+    ],
+    category: 'celebrities',
+    difficultyLevel: 1,
+    id: 153,
+    question:
+      'Która celebrytka i partnerka Jeffa Bezosa była na pokładzie misji Blue Origin razem z Katy Perry?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'Marka Monse' },
+      { correct: false, text: 'Balenciaga' },
+      { correct: false, text: 'Gucci' },
+      { correct: false, text: 'Stella McCartney' },
+    ],
+    category: 'celebrities',
+    difficultyLevel: 2,
+    id: 154,
+    question:
+      'Kto zaprojektował skafandry astronautyczne dla uczestniczek kobiecej misji Blue Origin w 2025 roku?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'około 105 km' },
+      { correct: false, text: 'około 50 km' },
+      { correct: false, text: 'około 300 km' },
+      { correct: false, text: 'około 10 km' },
+    ],
+    category: 'space',
+    difficultyLevel: 2,
+    id: 155,
+    question:
+      'Jaką wysokość osiągnęła rakieta Blue Origin NS-31 podczas misji z udziałem Katy Perry?',
+  },
+  {
+    answers: [
+      { correct: true, text: '2025' },
+      { correct: false, text: '2023' },
+      { correct: false, text: '2027' },
+      { correct: false, text: '2020' },
+    ],
+    category: 'space',
+    difficultyLevel: 0,
+    id: 156,
+    question:
+      'W którym roku odbyła się misja kosmiczna Sławosza Uznańskiego, dzięki której został drugim Polakiem w kosmosie?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'CERN (Europejska Organizacja Badań Jądrowych)' },
+      { correct: false, text: 'NASA' },
+      { correct: false, text: 'SpaceX' },
+      { correct: false, text: 'Polska Agencja Kosmiczna' },
+    ],
+    category: 'science',
+    difficultyLevel: 2,
+    id: 157,
+    question:
+      'Z jaką organizacją współpracował Sławosz Uznański zanim został astronautą Europejskiej Agencji Kosmicznej?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'Axiom Mission 4 (Ignis)' },
+      { correct: false, text: 'Apollo Next' },
+      { correct: false, text: 'Polaris Dawn' },
+      { correct: false, text: 'Dragon Starlink' },
+    ],
+    category: 'space',
+    difficultyLevel: 2,
+    id: 158,
+    question:
+      'Jak nazywała się misja kosmiczna, w której Sławosz Uznański poleciał na orbitę w 2025 roku?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'Bo ma otwarte okna' },
+      { correct: false, text: 'Bo nie ma grzałki' },
+      { correct: false, text: 'Bo siedzi w piwnicy' },
+      { correct: false, text: 'Bo zapomniał się zrestartować' },
+    ],
+    category: 'lameJoke',
+    difficultyLevel: 0,
+    id: 159,
+    question: 'Dlaczego komputerowi jest zimno?',
+  },
+  {
+    answers: [
+      { correct: false, text: 'Gotuje opowieść' },
+      { correct: false, text: 'Pisze przepis' },
+      { correct: true, text: 'Czyta makaron' },
+      { correct: false, text: 'Układa rozdziały w garnku' },
+    ],
+    category: 'lameJoke',
+    difficultyLevel: 0,
+    id: 160,
+    question: 'Co robi książka w kuchni?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'Bo boi się myszy' },
+      { correct: false, text: 'Bo nie umie pisać' },
+      { correct: false, text: 'Bo ma za duże uszy' },
+      { correct: false, text: 'Bo nie ma internetu w dżungli' },
+    ],
+    category: 'lameJoke',
+    difficultyLevel: 0,
+    id: 161,
+    question: 'Dlaczego słoń nie używa komputera?',
+  },
+  {
+    answers: [
+      { correct: false, text: 'Słońce' },
+      { correct: false, text: 'Kot w butach' },
+      { correct: true, text: 'Panda' },
+      { correct: false, text: 'Kameleon' },
+    ],
+    category: 'lameJoke',
+    difficultyLevel: 0,
+    id: 162,
+    question: 'Jakie zwierzę nosi okulary przeciwsłoneczne?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'Bo mają podejrzane korzenie' },
+      { correct: false, text: 'Bo rosną za szybko' },
+      { correct: false, text: 'Bo szeptają między sobą' },
+      { correct: false, text: 'Bo zrzucają liście' },
+    ],
+    category: 'lameJoke',
+    difficultyLevel: 0,
+    id: 163,
+    question: 'Dlaczego nie można ufać drzewom?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'Nie mam bagażu, podróżuję bez masy!' },
+      { correct: false, text: 'Proszę o pokój z widokiem na galaktykę' },
+      { correct: false, text: 'Czy jest tu Wi-Fi?' },
+      { correct: false, text: 'Mam tylko światło dzienne' },
+    ],
+    category: 'lameJoke',
+    difficultyLevel: 1,
+    id: 164,
+    question: 'Co mówi foton, gdy zatrzymuje się przy hotelu?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'Bo zawsze ściąga z Ziemi' },
+      { correct: false, text: 'Bo jest zbyt odległy' },
+      { correct: false, text: 'Bo woli świecić niż myśleć' },
+      { correct: false, text: 'Bo ciągle znika' },
+    ],
+    category: 'lameJoke',
+    difficultyLevel: 1,
+    id: 165,
+    question: 'Dlaczego księżyc nigdy nie zdaje egzaminów?',
+  },
+  {
+    answers: [
+      { correct: false, text: 'Bo zawsze mówi w reakcjach' },
+      { correct: false, text: 'Bo ma zbyt wiele pierwiastków prawdy' },
+      { correct: true, text: 'Bo wszystko wychodzi w próbnówce' },
+      { correct: false, text: 'Bo ma zbyt czyste sumienie' },
+    ],
+    category: 'lameJoke',
+    difficultyLevel: 1,
+    id: 166,
+    question: 'Dlaczego chemik nie potrafi kłamać?',
+  },
+  {
+    answers: [
+      { correct: true, text: 'Bo nie miał doświadczenia ziemskiego' },
+      { correct: false, text: 'Bo miał zielone referencje' },
+      { correct: false, text: 'Bo nie mówił po ludzku' },
+      { correct: false, text: 'Bo zapomniał CV na innej planecie' },
+    ],
+    category: 'lameJoke',
+    difficultyLevel: 1,
+    id: 167,
+    question: 'Dlaczego kosmita nie znalazł pracy?',
+  },
+  {
+    answers: [
+      { correct: false, text: 'Hello, World... żono!' },
+      { correct: true, text: 'Commituję się na zawsze' },
+      { correct: false, text: 'Zmieniam status na "occupied"' },
+      { correct: false, text: 'Ctrl+Z już nie działa' },
+    ],
+    category: 'lameJoke',
+    difficultyLevel: 1,
+    id: 168,
+    question: 'Co mówi programista po ślubie?',
+  },
 ];

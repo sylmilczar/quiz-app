@@ -1,7 +1,11 @@
+import type { Category } from '@/types/quizQuestions.types';
+
 import { Button } from '@/components';
+import { CATEGORY_LABELS } from '@/constants/categories';
 
 type QuestionCardProps = {
   answers: [string, string, string, string];
+  category: Category;
   isCorrect?: boolean | null;
   isLocked?: boolean;
   onSelect: (answer: string) => void;
@@ -13,6 +17,7 @@ const answerLabels = ['A)', 'B)', 'C)', 'D)'];
 
 export const QuestionCard = ({
   answers,
+  category,
   isCorrect,
   isLocked,
   onSelect,
@@ -20,7 +25,10 @@ export const QuestionCard = ({
   selectedAnswer,
 }: QuestionCardProps) => {
   return (
-    <div className="bg-tertiary-800/40 mx-auto w-full max-w-4xl rounded-sm p-2 shadow-md backdrop-blur-sm sm:p-8 md:p-4">
+    <div className="bg-tertiary-800/40 mx-auto w-full rounded-sm p-2 shadow-md backdrop-blur-sm sm:p-8 md:p-4 lg:min-w-4xl">
+      <p className="via-secondary-600 to-primary-700 from-tertiary-600 mb-4 bg-gradient-to-r bg-clip-text text-lg font-extrabold tracking-widest text-transparent uppercase">
+        💫 {CATEGORY_LABELS[category]}
+      </p>
       <p className="mb-6 text-lg font-semibold break-words text-white sm:text-xl">
         {question}
       </p>

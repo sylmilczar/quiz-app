@@ -96,6 +96,7 @@ export const GamePage = () => {
                 currentQuestion.answers[2]?.text ?? '',
                 currentQuestion.answers[3]?.text ?? '',
               ]}
+              category={currentQuestion.category}
               isCorrect={isCorrect}
               isLocked={isLocked}
               onSelect={handleSelect}
@@ -117,6 +118,13 @@ export const GamePage = () => {
               score={score}
               totalQuestions={questions.length}
             />
+            <Button
+              className="px-8 py-3 text-base"
+              onClick={() => navigate('/')}
+              variant="secondary"
+            >
+              Powrót do ekranu startowego
+            </Button>
           </div>
         )}
 

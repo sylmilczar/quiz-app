@@ -3,17 +3,21 @@ export type Answer = {
   text: string;
 };
 
+export type Category =
+  | 'animals'
+  | 'celebrities'
+  | 'chemistry'
+  | 'fun'
+  | 'geography'
+  | 'history'
+  | 'lameJoke'
+  | 'popculture'
+  | 'science'
+  | 'space';
+
 export type QuizQuestion = {
   answers: Answer[];
-  category:
-    | 'animals'
-    | 'chemistry'
-    | 'fun'
-    | 'geography'
-    | 'history'
-    | 'popculture'
-    | 'science'
-    | 'space';
+  category: Category;
   difficultyLevel: 0 | 1 | 2;
   id: number;
   question: string;
