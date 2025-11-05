@@ -28,9 +28,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'Mikroskop' },
-      { correct: true, text: 'Teleskop' },
       { correct: false, text: 'Termometr' },
       { correct: false, text: 'Barometr' },
+      { correct: true, text: 'Teleskop' },
     ],
     category: 'science',
     difficultyLevel: 0,
@@ -45,7 +45,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Rigel' },
     ],
     category: 'space',
-    difficultyLevel: 0,
+    difficultyLevel: 2,
     id: 4,
     question: 'Jak nazywa się najbliższa gwiazda poza Słońcem?',
   },
@@ -70,7 +70,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Węgiel' },
     ],
     category: 'chemistry',
-    difficultyLevel: 0,
+    difficultyLevel: 1,
     id: 6,
     question:
       'Który pierwiastek chemiczny jest najlżejszy i podstawowy w gwiazdach?',
@@ -83,7 +83,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Pas Orion' },
     ],
     category: 'space',
-    difficultyLevel: 0,
+    difficultyLevel: 2,
     id: 7,
     question: 'Jak nazywa się pas planetarny między Marsem a Jowiszem?',
   },
@@ -151,9 +151,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'Temperaturę' },
-      { correct: true, text: 'Siłę trzęsienia ziemi' },
       { correct: false, text: 'Ciśnienie' },
       { correct: false, text: 'Wilgotność' },
+      { correct: true, text: 'Siłę trzęsienia ziemi' },
     ],
     category: 'science',
     difficultyLevel: 0,
@@ -226,9 +226,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'Słoń' },
-      { correct: true, text: 'Płetwal błękitny' },
       { correct: false, text: 'Rekin wielorybi' },
       { correct: false, text: 'Hipopotam' },
+      { correct: true, text: 'Płetwal błękitny' },
     ],
     category: 'animals',
     difficultyLevel: 0,
@@ -400,7 +400,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     category: 'animals',
     difficultyLevel: 0,
     id: 32,
-    question: 'Które zwierzę potrafi poruszać się po wodzie, ale jest ssakiem?',
+    question: 'Które zwierzę potrafi poruszać się w wodzie, ale jest ssakiem?',
   },
   {
     answers: [
@@ -516,9 +516,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     answers: [
-      { correct: true, text: 'Żyrafa' },
       { correct: false, text: 'Zebra' },
       { correct: false, text: 'Lampart' },
+      { correct: true, text: 'Żyrafa' },
       { correct: false, text: 'Antylopa' },
     ],
     category: 'animals',
@@ -616,9 +616,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'Lew' },
-      { correct: true, text: 'Niedźwiedź polarny' },
       { correct: false, text: 'Tygrys' },
       { correct: false, text: 'Hiena' },
+      { correct: true, text: 'Niedźwiedź polarny' },
     ],
     category: 'animals',
     difficultyLevel: 1,
@@ -761,7 +761,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Europa' },
     ],
     category: 'space',
-    difficultyLevel: 1,
+    difficultyLevel: 2,
     id: 61,
     question:
       'Który satelita naturalny ma największą średnicę w Układzie Słonecznym?',
@@ -774,7 +774,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Kormoran' },
     ],
     category: 'animals',
-    difficultyLevel: 1,
+    difficultyLevel: 0,
     id: 62,
     question:
       'Który ptak nie lata, ale świetnie pływa i żyje głównie na Antarktydzie?',
@@ -807,11 +807,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     answers: [
       {
         correct: false,
-        text: 'Pierwsze lądowanie człowieka na Księżycu (1969)',
+        text: 'Pierwsze lądowanie człowieka na Księżycu ',
       },
-      { correct: false, text: 'Wybuch II wojny światowej (1939)' },
-      { correct: false, text: 'Konferencja w Wersalu (1919)' },
-      { correct: true, text: 'Rewolucja francuska (1789)' },
+      { correct: false, text: 'Wybuch II wojny światowej' },
+      { correct: false, text: 'Konferencja w Wersalu' },
+      { correct: true, text: 'Rewolucja francuska' },
     ],
     category: 'history',
     difficultyLevel: 1,
@@ -846,9 +846,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'Zaćmienie' },
-      { correct: true, text: 'Równonoc' },
       { correct: false, text: 'Przesilenie' },
       { correct: false, text: 'Eklipsa' },
+      { correct: true, text: 'Równonoc' },
     ],
     category: 'space',
     difficultyLevel: 1,
@@ -924,8 +924,9 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     difficultyLevel: 2,
     id: 73,
     question:
-      'Jak nazywa się prędkość, przy której ucieczkowa z ciała nieba jest równa prędkości światła?',
+      'Jak nazywa się prędkość, przy której prędkość ucieczki z danego ciała niebieskiego jest równa prędkości światła?',
   },
+
   {
     answers: [
       { correct: false, text: 'H2O' },
@@ -971,7 +972,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Nerka' },
     ],
     category: 'science',
-    difficultyLevel: 2,
+    difficultyLevel: 0,
     id: 77,
     question: 'Który organ w ciele kręgowca pompuje krew?',
   },
@@ -983,7 +984,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Żyrafa' },
     ],
     category: 'animals',
-    difficultyLevel: 2,
+    difficultyLevel: 0,
     id: 78,
     question: 'Które zwierzę ma najbardziej złożony system echolokacji?',
   },
@@ -1017,15 +1018,15 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'Smok' },
-      { correct: true, text: 'Feniks' },
       { correct: false, text: 'Minotaur' },
+      { correct: true, text: 'Feniks' },
       { correct: false, text: 'Hydra' },
     ],
     category: 'fun',
-    difficultyLevel: 2,
+    difficultyLevel: 1,
     id: 81,
     question:
-      'Który stwór z mitologii często porównywany jest do wielkiej gwiazdy czy planety w popkulturze?',
+      'Który stwór z mitologii często porównywany jest symbolem "śmierci i odrodzenia"?',
   },
   {
     answers: [
@@ -1061,7 +1062,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Galileusz' },
     ],
     category: 'history',
-    difficultyLevel: 2,
+    difficultyLevel: 1,
     id: 84,
     question: 'Który słynny fizyk sformułował teorię względności?',
   },
@@ -1073,7 +1074,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Azot' },
     ],
     category: 'chemistry',
-    difficultyLevel: 2,
+    difficultyLevel: 1,
     id: 85,
     question:
       'Który gaz przyczynia się najbardziej do efektu cieplarnianego (ze względów ilościowych i wpływu)?',
@@ -1093,13 +1094,13 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     answers: [
-      { correct: true, text: 'Rów Mariański' },
       { correct: false, text: 'Row Atakama' },
       { correct: false, text: 'Rów Tonga' },
       { correct: false, text: 'Rów Filipiński' },
+      { correct: true, text: 'Rów Mariański' },
     ],
     category: 'geography',
-    difficultyLevel: 2,
+    difficultyLevel: 0,
     id: 87,
     question: 'Jak nazywa się największy znany oceaniczny rów?',
   },
@@ -1136,7 +1137,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Magnez' },
     ],
     category: 'chemistry',
-    difficultyLevel: 2,
+    difficultyLevel: 1,
     id: 90,
     question:
       'Który pierwiastek chemiczny jest podstawą szkła (w typowym szkle krzemowym)?',
@@ -1189,7 +1190,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Kaczki' },
     ],
     category: 'animals',
-    difficultyLevel: 2,
+    difficultyLevel: 1,
     id: 94,
     question:
       'Które zwierzę jest znane z wysokiej inteligencji społecznej i używania narzędzi w naturze?',
@@ -1231,7 +1232,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     difficultyLevel: 2,
     id: 97,
     question:
-      'Jak nazywa się proces, gdy atom rzesze elektronów traci lub zyskuje żeby stać się jonem?',
+      'Jak nazywa się proces, w którym atom traci lub zyskuje elektrony, aby stać się jonem?',
   },
   {
     answers: [
@@ -1241,7 +1242,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Mikroskop' },
     ],
     category: 'science',
-    difficultyLevel: 2,
+    difficultyLevel: 0,
     id: 98,
     question:
       'Który instrument używany jest do wykrywania obiektów pod wodą (np. ryb)?',
@@ -1313,8 +1314,8 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'Ceres' },
-      { correct: true, text: 'Eris' },
       { correct: false, text: 'Pluton' },
+      { correct: true, text: 'Eris' },
       { correct: false, text: 'Makemake' },
     ],
     category: 'space',
@@ -1325,16 +1326,18 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     answers: [
-      { correct: true, text: 'Pawie (pióropusz)' },
-      { correct: false, text: 'Krowy' },
-      { correct: false, text: 'Lwy' },
-      { correct: false, text: 'Jelenie' },
+      { correct: false, text: 'Barwniki wytwarzane przez specjalne gruczoły' },
+      { correct: false, text: 'Zdolność piór do fluorescencji w świetle UV' },
+      { correct: false, text: 'Efekt bioluminescencji kontrolowany hormonami' },
+      {
+        correct: true,
+        text: 'Interferencja światła na mikroskopijnych strukturach piór',
+      },
     ],
     category: 'animals',
     difficultyLevel: 2,
     id: 105,
-    question:
-      'Które zwierzę żyje w stadach zwanych "pióropuszami" lub "ruhami"?',
+    question: 'Co powoduje intensywne, metaliczne kolory ogona pawia?',
   },
   {
     answers: [
@@ -1344,7 +1347,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Klimat śródziemnomorski' },
     ],
     category: 'geography',
-    difficultyLevel: 2,
+    difficultyLevel: 1,
     id: 106,
     question:
       'Który klimat charakteryzuje długie, zimne zimy i krótkie, chłodne lata — typowy dla obszarów blisko koła podbiegunowego?',
@@ -1396,7 +1399,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Mika' },
     ],
     category: 'chemistry',
-    difficultyLevel: 2,
+    difficultyLevel: 0,
     id: 110,
     question: 'Który materiał jest najtwardszy naturalnie występujący?',
   },
@@ -1409,7 +1412,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Bocian' },
     ],
     category: 'animals',
-    difficultyLevel: 1,
+    difficultyLevel: 0,
     id: 111,
     question:
       'Który ptak jest znany ze swojej zdolności do naśladowania ludzkiej mowy?',
@@ -1428,10 +1431,10 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     answers: [
-      { correct: false, text: 'Pająk (8)' },
-      { correct: true, text: 'Stonoga (setki)' },
-      { correct: false, text: 'Królik (4)' },
-      { correct: false, text: 'Ptak (2)' },
+      { correct: false, text: 'Pająk' },
+      { correct: true, text: 'Stonoga' },
+      { correct: false, text: 'Królik' },
+      { correct: false, text: 'Ptak' },
     ],
     category: 'animals',
     difficultyLevel: 1,
@@ -1473,10 +1476,10 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Delfiny' },
     ],
     category: 'animals',
-    difficultyLevel: 2,
+    difficultyLevel: 1,
     id: 116,
     question:
-      'Które zwierzę ma najbardziej rozwinięty system społeczny przypominający stado z hierarchią (mrówki, pszczoły)?',
+      'Które zwierzę ma najbardziej rozwinięty system społeczny przypominający stado z hierarchią?',
   },
   {
     answers: [
@@ -1493,8 +1496,8 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'RNA' },
-      { correct: true, text: 'DNA' },
       { correct: false, text: 'ATP' },
+      { correct: true, text: 'DNA' },
       { correct: false, text: 'Glukoza' },
     ],
     category: 'science',
@@ -1514,7 +1517,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     difficultyLevel: 1,
     id: 119,
     question:
-      'Które zwierzę zwykle ma status symbolu pokoju w wielu kulturach (ptak)?',
+      'Które zwierzę zwykle ma status symbolu pokoju w wielu kulturach?',
   },
   {
     answers: [
@@ -1556,20 +1559,19 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Zwrotnik Koziorożca' },
     ],
     category: 'geography',
-    difficultyLevel: 1,
+    difficultyLevel: 0,
     id: 122,
-    question:
-      'Jak nazywa się linia równoległa do równika, dzieląca Ziemię na północ i południe?',
+    question: 'Jak nazywa się linia dzieląca Ziemię na północ i południe?',
   },
   {
     answers: [
       { correct: false, text: 'Aktywność sejsmiczna' },
+      { correct: false, text: 'Pływy oceaniczne' },
+      { correct: false, text: 'Chmury burzowe' },
       {
         correct: true,
         text: 'Interakcja wiatru słonecznego z ziemskim polem magnetycznym',
       },
-      { correct: false, text: 'Pływy oceaniczne' },
-      { correct: false, text: 'Chmury burzowe' },
     ],
     category: 'space',
     difficultyLevel: 2,
@@ -1656,8 +1658,8 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'Układ nerwowy' },
-      { correct: true, text: 'Układ krążenia (krwionośny)' },
       { correct: false, text: 'Układ pokarmowy' },
+      { correct: true, text: 'Układ krwionośny' },
       { correct: false, text: 'Układ rozrodczy' },
     ],
     category: 'science',
@@ -1675,7 +1677,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Słoń' },
     ],
     category: 'popculture',
-    difficultyLevel: 1,
+    difficultyLevel: 0,
     id: 131,
     question: 'Które zwierzę jest symbolem mądrości w wielu kulturach?',
   },
@@ -1695,7 +1697,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'Śmiercionośny pająk australijski' },
-      { correct: true, text: 'Rozdymka (tetrodotoksyna)' },
+      { correct: true, text: 'Rozdymka' },
       { correct: false, text: 'Kobra' },
       { correct: false, text: 'Skorpion' },
     ],
@@ -1751,16 +1753,16 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Tygrys' },
     ],
     category: 'animals',
-    difficultyLevel: 1,
+    difficultyLevel: 2,
     id: 137,
     question: 'Który gatunek lwa jest największy i najbardziej rozpoznawalny?',
   },
   {
     answers: [
-      { correct: true, text: 'Planeta krążąca wokół innej gwiazdy niż Słońce' },
       { correct: false, text: 'Planeta w Układzie Słonecznym' },
       { correct: false, text: 'Księżyc' },
       { correct: false, text: 'Kometa' },
+      { correct: true, text: 'Planeta krążąca wokół innej gwiazdy niż Słońce' },
     ],
     category: 'space',
     difficultyLevel: 2,
@@ -1792,7 +1794,6 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     question:
       'Który pierwiastek jest kluczowy do życia i jest składnikiem cząsteczek wody i organicznych związków?',
   },
-
   {
     answers: [
       { correct: true, text: 'Tatooine (Gwiezdne Wojny)' },
@@ -1804,20 +1805,20 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     difficultyLevel: 2,
     id: 141,
     question:
-      'Który gwiezdny układ planetarny (fikcyjny) jest często przedstawiany w popkulturze jako dom obcych (użyj opcji najbardziej związanej z kulturą)?',
+      'Która fikcyjna planeta jest znana z serii „Gwiezdne wojny” jako pustynny świat zamieszkany przez różne obce gatunki?',
   },
   {
     answers: [
-      { correct: true, text: 'Krab pustelnik (zmiana muszli)' },
       { correct: false, text: 'Żółw' },
-      { correct: false, text: 'Pszczoła' },
-      { correct: false, text: 'Słoń' },
+      { correct: false, text: 'Małż' },
+      { correct: false, text: 'Ślimak winniczek' },
+      { correct: true, text: 'Krab pustelnik' },
     ],
     category: 'animals',
     difficultyLevel: 2,
     id: 142,
     question:
-      'Które zwierzę jest zdolne do opuszczania swojego pancerza lub muszli i wrażenia nazywanego "odnową"?',
+      'Które zwierzę regularnie porzuca swoją muszlę i przenosi się do nowej, gdy z niej wyrasta?',
   },
   {
     answers: [
@@ -1861,25 +1862,25 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
     answers: [
       { correct: false, text: 'Szympans' },
-      { correct: true, text: 'Delfin' },
       { correct: false, text: 'Słoń' },
       { correct: false, text: 'Pies' },
+      { correct: true, text: 'Delfin' },
     ],
     category: 'animals',
     difficultyLevel: 2,
     id: 146,
     question:
-      'Które zwierzę ma największe mózgi w stosunku do rozmiaru ciała, kojarzone z inteligencją?',
+      'Które zwierzę ma największy mózg w stosunku do rozmiaru ciała, kojarzone z inteligencją?',
   },
   {
     answers: [
       { correct: false, text: 'Rok' },
-      { correct: true, text: 'Dzień (około 24 godziny)' },
+      { correct: true, text: 'Dzień' },
       { correct: false, text: 'Miesiąc' },
       { correct: false, text: 'Dekada' },
     ],
     category: 'space',
-    difficultyLevel: 1,
+    difficultyLevel: 0,
     id: 147,
     question:
       'Jak nazywa się linia czasowa, w której Ziemia wykonuje pełny obrót wokół swojej osi?',
@@ -1902,7 +1903,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { correct: false, text: 'Bocian' },
       {
         correct: true,
-        text: 'Sieweczka białooka (lub siewka) — rekordy długich przelotów',
+        text: 'Siewka złotawa',
       },
       { correct: false, text: 'Albatros' },
       { correct: false, text: 'Jaskółka' },
@@ -1911,11 +1912,11 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     difficultyLevel: 2,
     id: 149,
     question:
-      'Które zwierzę ma rekord w długości lotu bez przerwy wśród ptaków migrujących (przelot bez lądowania)?',
+      'Który ptak ustanowił rekord najdłuższego nieprzerwanego lotu migracyjnego bez lądowania?',
   },
   {
     answers: [
-      { correct: false, text: 'Obszar w wnętrzu Jowisza' },
+      { correct: false, text: 'Obszar we wnętrzu Jowisza' },
       {
         correct: true,
         text: 'Obszar wpływu wiatru słonecznego otaczający Układ Słoneczny',
@@ -2045,21 +2046,21 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     answers: [
-      { correct: false, text: 'Gotuje opowieść' },
-      { correct: false, text: 'Pisze przepis' },
-      { correct: true, text: 'Czyta makaron' },
-      { correct: false, text: 'Układa rozdziały w garnku' },
+      { correct: false, text: 'Bo się rozjechał z planem' },
+      { correct: false, text: 'Bo mu się zmyło' },
+      { correct: true, text: 'Bo stracił płynność' },
+      { correct: false, text: 'Bo się przelał' },
     ],
     category: 'lameJoke',
-    difficultyLevel: 0,
+    difficultyLevel: 1,
     id: 160,
-    question: 'Co robi książka w kuchni?',
+    question: 'Dlaczego bankier nie został hydraulikiem?',
   },
   {
     answers: [
-      { correct: true, text: 'Bo boi się myszy' },
       { correct: false, text: 'Bo nie umie pisać' },
       { correct: false, text: 'Bo ma za duże uszy' },
+      { correct: true, text: 'Bo boi się myszy' },
       { correct: false, text: 'Bo nie ma internetu w dżungli' },
     ],
     category: 'lameJoke',
@@ -2105,50 +2106,53 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
   },
   {
     answers: [
-      { correct: true, text: 'Bo zawsze ściąga z Ziemi' },
-      { correct: false, text: 'Bo jest zbyt odległy' },
-      { correct: false, text: 'Bo woli świecić niż myśleć' },
-      { correct: false, text: 'Bo ciągle znika' },
+      { correct: false, text: 'Bo muzyka nie ma grawitacji' },
+      { correct: false, text: 'Bo nikt nie przyleciał' },
+      { correct: false, text: 'Bo muzyka to tylko wibracje' },
+      { correct: true, text: 'Bo nie ma atmosfery' },
     ],
     category: 'lameJoke',
     difficultyLevel: 1,
     id: 165,
-    question: 'Dlaczego księżyc nigdy nie zdaje egzaminów?',
+    question: 'Dlaczego imprezy w kosmosie są nieudane?',
   },
   {
     answers: [
-      { correct: false, text: 'Bo zawsze mówi w reakcjach' },
-      { correct: false, text: 'Bo ma zbyt wiele pierwiastków prawdy' },
-      { correct: true, text: 'Bo wszystko wychodzi w próbnówce' },
-      { correct: false, text: 'Bo ma zbyt czyste sumienie' },
+      { correct: false, text: 'Rekin' },
+      { correct: false, text: 'Karaś' },
+      { correct: false, text: 'Łosoś' },
+      { correct: true, text: 'Śledź' },
     ],
     category: 'lameJoke',
     difficultyLevel: 1,
     id: 166,
-    question: 'Dlaczego chemik nie potrafi kłamać?',
+    question: 'Jak nazywa się ryba szpieg?',
   },
   {
     answers: [
-      { correct: true, text: 'Bo nie miał doświadczenia ziemskiego' },
-      { correct: false, text: 'Bo miał zielone referencje' },
-      { correct: false, text: 'Bo nie mówił po ludzku' },
-      { correct: false, text: 'Bo zapomniał CV na innej planecie' },
+      { correct: true, text: 'CO2' },
+      {
+        correct: false,
+        text: 'Kiedy ciśnienie w pracy osiągnie stan krytyczny',
+      },
+      { correct: false, text: 'Jak się nasyci, to musi się ulotnić' },
+      { correct: false, text: 'Raz na pół roku, czyli co dwa atomy tlenu' },
     ],
     category: 'lameJoke',
     difficultyLevel: 1,
     id: 167,
-    question: 'Dlaczego kosmita nie znalazł pracy?',
+    question: 'Co ile miesięcy chemik jeździ na wakacje?',
   },
   {
     answers: [
-      { correct: false, text: 'Hello, World... żono!' },
-      { correct: true, text: 'Commituję się na zawsze' },
-      { correct: false, text: 'Zmieniam status na "occupied"' },
-      { correct: false, text: 'Ctrl+Z już nie działa' },
+      { correct: false, text: 'Bo przestał klikać w ludzi' },
+      { correct: false, text: 'Bo skończyły mu się memy' },
+      { correct: true, text: 'Bo nie mógł znaleźć połączenia' },
+      { correct: false, text: 'Bo router go zdradził z sąsiadem' },
     ],
     category: 'lameJoke',
     difficultyLevel: 1,
     id: 168,
-    question: 'Co mówi programista po ślubie?',
+    question: 'Dlaczego informatyk został singlem?',
   },
 ];
