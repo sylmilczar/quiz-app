@@ -7,19 +7,31 @@ export const GamePage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="m-5 flex flex-col gap-5 text-center">
-      <p className="mx-auto text-xl text-slate-100">
-        Gra rozpoczęta — odpowiadaj na pytania
-      </p>
+    <div className="flex flex-col items-center justify-center gap-10 px-4 py-12">
+      <div className="w-full max-w-2xl text-center">
+        <h2 className="text-secondary-400 mb-2 text-3xl font-semibold">
+          Gra rozpoczęta!
+        </h2>
+        <p className="mb-8 text-slate-200">
+          Odpowiadaj na pytania i sprawdź swoją wiedzę 🚀
+        </p>
 
-      <QuestionCard
-        answers={['jedeną', 'dwie', 'trzy', 'cztery']}
-        onSelect={(a) => console.log('wybrano odpowiedź', a)}
-        question="Ile kot ma łap?"
-      />
-      <Button onClick={() => navigate('/')} variant="secondary">
-        Powrót
-      </Button>
+        <QuestionCard
+          answers={['jedną', 'dwie', 'trzy', 'cztery']}
+          onSelect={(a) => console.log('wybrano odpowiedź', a)}
+          question="Ile kot ma łap?"
+        />
+
+        <div className="mt-10">
+          <Button
+            className="px-8 py-3 text-base"
+            onClick={() => navigate('/')}
+            variant="secondary"
+          >
+            Powrót
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };

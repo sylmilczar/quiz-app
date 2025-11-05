@@ -1,7 +1,7 @@
 import { Button } from '@/components';
 
 type QuestionCardProps = {
-  answers: [string, string, string, string]; // dokładnie 4 elementy
+  answers: [string, string, string, string];
   onSelect: (answer: string) => void;
   question: string;
 };
@@ -14,18 +14,18 @@ export const QuestionCard = ({
   question,
 }: QuestionCardProps) => {
   return (
-    <div className="bg-secondary-600 w-full rounded-sm p-6 text-center">
-      <p className="mb-6 text-lg font-semibold">{question}</p>
+    <div className="bg-tertiary-800/40 rounded-2xl p-8 shadow-md backdrop-blur-sm">
+      <p className="mb-6 text-xl font-semibold text-white">{question}</p>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {answers.map((answer, index) => (
           <Button
-            className="flex items-center gap-2 text-base"
+            className="flex w-full justify-center gap-2 py-3 text-base font-medium transition hover:brightness-110"
             key={`${index}-${answer}`}
             onClick={() => onSelect(answer)}
             variant="primary"
           >
-            <span className="px-4">
+            <span>
               {answerLabels[index]} {answer}
             </span>
           </Button>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 type BaseLayoutProps = {
   children: React.ReactNode;
   title?: string;
@@ -7,21 +5,24 @@ type BaseLayoutProps = {
 
 export const BaseLayout = ({
   children,
-  title = 'Quiz App',
+  title = 'CosmicQuiz',
 }: BaseLayoutProps) => {
   return (
-    <div className="flex min-h-screen flex-col bg-slate-600 text-slate-100">
-      <header className="border-b border-slate-800 bg-slate-800/60">
-        <div className="mx-auto max-w-5xl px-4 py-4">
-          <h1 className="text-xl font-semibold">{title}</h1>
+    <div className="bg-primary-600 flex min-h-screen flex-col text-slate-100">
+      <header className="from-secondary-900 to-secondary-800 bg-gradient-to-r p-1">
+        <div className="mx-auto max-w-5xl px-4 py-3">
+          <div className="flex items-center gap-3">
+            <img alt="logo" className="size-20" src="/cosmic_icon.svg" />
+            <h1 className="text-xl font-semibold">{title}</h1>
+          </div>
         </div>
       </header>
 
       <main className="mx-auto max-w-5xl flex-1 px-4 py-8">{children}</main>
 
-      <footer className="mt-auto border-t border-slate-800/60 bg-slate-800/60">
-        <div className="mx-auto max-w-5xl px-4 py-4 text-sm text-slate-400">
-          &copy; {new Date().getFullYear()} Quiz App — powodzenia!
+      <footer className="bg-secondary-800 mt-auto">
+        <div className="text-secondary-50 mx-auto max-w-5xl p-2 text-sm">
+          &copy; {new Date().getFullYear()} CosmicQuiz
         </div>
       </footer>
     </div>

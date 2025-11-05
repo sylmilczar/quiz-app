@@ -2,41 +2,44 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-primary-50: #f5f8fa;
-  --color-primary-100: #e6edf3;
-  --color-primary-200: #c8d9e4;
-  --color-primary-300: #a9c3d4;
-  --color-primary-400: #8aaac3;
-  --color-primary-500: #6c91b3; /* Steel blue */
-  --color-primary-600: #58789b;
-  --color-primary-700: #465f7f;
-  --color-primary-800: #354764;
-  --color-primary-900: #24304a;
-  --color-primary-950: #161d2f;
+  /* Primary — Calm Cosmic Blue */
+  --color-primary-50: #f5f7fa;
+  --color-primary-100: #e2e8f3;
+  --color-primary-200: #c3d0e7;
+  --color-primary-300: #99afd6;
+  --color-primary-400: #6d88c2;
+  --color-primary-500: #4c67ab; /* Main */
+  --color-primary-600: #3c528e;
+  --color-primary-700: #324373;
+  --color-primary-800: #283558;
+  --color-primary-900: #1f2941;
+  --color-primary-950: #141a27;
 
-  --color-secondary-50: #f6f7f8;
-  --color-secondary-100: #e2e4e6;
-  --color-secondary-200: #c5c8cc;
-  --color-secondary-300: #a9adb3;
-  --color-secondary-400: #7f848c;
-  --color-secondary-500: #555b63; /* Dark charcoal – cooler tone */
-  --color-secondary-600: #434950;
-  --color-secondary-700: #32363c;
-  --color-secondary-800: #212428;
-  --color-secondary-900: #111316;
-  --color-secondary-950: #08090b;
+  /* Secondary — Meteor Orange */
+  --color-secondary-50: #fff8f2;
+  --color-secondary-100: #ffe8d4;
+  --color-secondary-200: #ffc69e;
+  --color-secondary-300: #ffa169;
+  --color-secondary-400: #ff7c33;
+  --color-secondary-500: #f15b1f; /* Main */
+  --color-secondary-600: #c64a1b;
+  --color-secondary-700: #9c3a16;
+  --color-secondary-800: #712911;
+  --color-secondary-900: #47190b;
+  --color-secondary-950: #290d05;
 
-  --color-tertiary-50: #fdf3f0;
-  --color-tertiary-100: #fbe1da;
-  --color-tertiary-200: #f4bfb0;
-  --color-tertiary-300: #ec9c86;
-  --color-tertiary-400: #e57a5c;
-  --color-tertiary-500: #cc5e42; /* Deep rust */
-  --color-tertiary-600: #a84a35;
-  --color-tertiary-700: #843727;
-  --color-tertiary-800: #602319;
-  --color-tertiary-900: #3b100c;
-  --color-tertiary-950: #240806;
+  /* Tertiary — Stellar Slate */
+  --color-tertiary-50: #f6f7f9;
+  --color-tertiary-100: #e4e7ec;
+  --color-tertiary-200: #c9ced9;
+  --color-tertiary-300: #a6adb9;
+  --color-tertiary-400: #7d8797;
+  --color-tertiary-500: #5e6979; /* Main */
+  --color-tertiary-600: #4b5563;
+  --color-tertiary-700: #3c4450;
+  --color-tertiary-800: #2c333d;
+  --color-tertiary-900: #1f2328;
+  --color-tertiary-950: #131518;
 }
 
 @layer base {
