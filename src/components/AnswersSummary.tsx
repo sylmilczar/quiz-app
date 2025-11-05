@@ -1,3 +1,6 @@
+import { DIFFICULTY_LABELS } from '@/constants/labels';
+import { useQuizParams } from '@/hooks/useQuizParams';
+
 type Answer = {
   correctAnswer: string;
   isCorrect: boolean;
@@ -16,19 +19,23 @@ export const AnswersSummary = ({
   score,
   totalQuestions,
 }: AnswersSummaryProps) => {
+  const { difficulty } = useQuizParams();
   return (
-    <div className="w-full py-8">
-      <div className="text-center">
+    <div className="w-full py-6">
+      <div className="mb-6 text-center">
         <h3 className="mb-4 text-2xl font-bold text-green-400">Koniec gry!</h3>
-        <p className="mb-6 text-lg text-slate-200">
+        <p className="text-lg text-slate-200">
           Twój wynik:{' '}
           <span className="font-bold">
-            {score} / {totalQuestions}
+            {score} / {totalQuestions}{' '}
           </span>
+        </p>
+        <p className="text-sm">
+          <i>(poziom: {DIFFICULTY_LABELS[difficulty]})</i>
         </p>
       </div>
 
-      <div className="bg-tertiary-800/40 mx-auto mb-8 w-full max-w-2xl rounded-sm p-4 sm:p-6">
+      <div className="bg-tertiary-800/40 mx-auto mb-2 w-full max-w-2xl rounded-sm p-4 sm:p-6">
         <h4 className="mb-4 text-lg font-semibold text-yellow-400 sm:text-xl">
           Podsumowanie odpowiedzi:
         </h4>
