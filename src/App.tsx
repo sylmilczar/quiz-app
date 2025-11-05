@@ -1,20 +1,27 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import BaseLayout from './layouts/BaseLayout';
 import GamePage from './pages/GamePage';
 import HomePage from './pages/HomePage';
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <BaseLayout>
-        <Routes>
-          <Route element={<HomePage />} path="/" />
-          <Route element={<GamePage />} path="/game" />
-        </Routes>
-      </BaseLayout>
-    </BrowserRouter>
-  );
-};
+const router = createBrowserRouter(
+  [
+    {
+      children: [
+        { element: <HomePage />, path: '/' },
+        { element: <GamePage />, path: '/game' },
+      ],
+      element: <BaseLayout />,
+    },
+  ],
+  {
+    future: {
+      v7_relativeSplatPath: true,
+      v7_startTransition: true,
+    },
+  }
+);
 
-export default App;
+export default function App() {
+  return <RouterProvider router={router} />;
+}

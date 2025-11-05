@@ -1,12 +1,10 @@
+import { Outlet } from 'react-router-dom';
+
 type BaseLayoutProps = {
-  children: React.ReactNode;
   title?: string;
 };
 
-export const BaseLayout = ({
-  children,
-  title = 'CosmicQuiz',
-}: BaseLayoutProps) => {
+export const BaseLayout = ({ title = 'CosmicQuiz' }: BaseLayoutProps) => {
   return (
     <div className="bg-primary-600 flex min-h-screen flex-col text-slate-100">
       <header className="from-secondary-900 to-secondary-800 bg-gradient-to-r p-1">
@@ -19,7 +17,7 @@ export const BaseLayout = ({
       </header>
 
       <main className="mx-auto max-w-5xl flex-1 sm:px-4 sm:py-8">
-        {children}
+        <Outlet />
       </main>
 
       <footer className="bg-secondary-800 mt-auto">

@@ -2,7 +2,7 @@ export const ScrollDownButton = () => {
   const handleScroll = () => {
     window.scrollTo({
       behavior: 'smooth',
-      top: window.innerHeight, // przewiń o jeden ekran w dół
+      top: window.innerHeight,
     });
   };
 

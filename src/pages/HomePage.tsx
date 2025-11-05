@@ -1,18 +1,22 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+import type { Difficulty } from '@/types/quizQuestions.types';
+
+import { CustomSelect } from '@/components';
 import { Button } from '@/components/Button';
+import { DIFFICULTY_LABELS } from '@/constants/labels';
 
 export const HomePage = () => {
   const navigate = useNavigate();
-  const [numQuestions, setNumQuestions] = useState<number>(5);
-  const [difficulty, setDifficulty] = useState<string>('0');
+  const [numQuestions, setNumQuestions] = useState<string>('5');
+  const [difficulty, setDifficulty] = useState<Difficulty>(0);
 
   const startGame = () => {
     // pass parameters to /game as query params (can be read by GamePage later)
     const params = new URLSearchParams({
-      difficulty,
-      questions: String(numQuestions),
+      difficulty: String(difficulty),
+      questions: numQuestions,
     });
     navigate(`/game?${params.toString()}`);
   };
@@ -36,31 +40,26 @@ export const HomePage = () => {
       </div>
       <div className="bg-tertiary-700/20 w-full max-w-2xl rounded-sm p-6 text-center shadow-lg backdrop-blur-sm">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
-          <label className="flex items-center justify-center gap-2 text-slate-200">
-            Ilość pytań:
-            <select
-              className="bg-tertiary-700 ml-2 rounded-sm px-2 py-1 text-slate-100"
-              onChange={(e) => setNumQuestions(Number(e.target.value))}
-              value={numQuestions}
-            >
-              <option value={5}>5</option>
-              <option value={10}>10</option>
-              <option value={20}>20</option>
-            </select>
-          </label>
+          <CustomSelect
+            label="Ilość pytań"
+            onChange={(v) => setNumQuestions(v)}
+            options={[
+              { label: '5', value: '5' },
+              { label: '10', value: '10' },
+              { label: '20', value: '20' },
+            ]}
+            value={numQuestions}
+          />
 
-          <label className="flex items-center justify-center gap-2 text-slate-200">
-            Poziom:
-            <select
-              className="bg-tertiary-700 ml-2 rounded-sm px-2 py-1 text-slate-100"
-              onChange={(e) => setDifficulty(e.target.value)}
-              value={difficulty}
-            >
-              <option value="0">Łatwy</option>
-              <option value="1">Średni</option>
-              <option value="2">Trudny</option>
-            </select>
-          </label>
+          <CustomSelect
+            label="Poziom"
+            onChange={(v) => setDifficulty(v)}
+            options={Object.entries(DIFFICULTY_LABELS).map(([key, label]) => ({
+              label,
+              value: Number(key) as Difficulty,
+            }))}
+            value={difficulty}
+          />
         </div>
       </div>
       <div className="flex justify-center py-6">

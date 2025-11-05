@@ -24,7 +24,7 @@ export const Button = ({
     <button
       {...props}
       className={clsx(
-        'rounded-sm px-4 py-2 font-medium transition active:scale-95',
+        'cursor-pointer rounded-sm px-4 py-2 font-medium transition active:scale-95',
         variantClasses[variant],
         className
       )}
