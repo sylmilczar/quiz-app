@@ -21,8 +21,9 @@ export const BaseLayout = ({ title = 'CosmicQuiz' }: BaseLayoutProps) => {
       </main>
 
       <footer className="bg-secondary-800 mt-auto">
-        <div className="text-secondary-50 mx-auto max-w-5xl p-2 text-sm">
-          &copy; {new Date().getFullYear()} CosmicQuiz
+        <div className="text-secondary-50 mx-auto flex max-w-5xl justify-between p-2 text-sm">
+          <span>&copy; {new Date().getFullYear()} CosmicQuiz</span>
+          <span>v.1.0.0</span>
         </div>
       </footer>
     </div>
