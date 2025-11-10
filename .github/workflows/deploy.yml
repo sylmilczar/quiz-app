@@ -2,6 +2,11 @@ name: CosmicQuiz deploy to Netlify
 
 on:
   workflow_dispatch:
+    inputs:
+      deploy-netlify:
+        type: boolean
+        description: Enable Netlify deployment
+        default: true
 
 jobs:
   app-setup:
